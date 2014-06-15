@@ -3,8 +3,9 @@ docker-on-wheels
 
 This is a simple collection of scripts for working with Python Wheels and
 Docker containers. The aim is to isolate the building of Wheels from their
-installation and use such that things like compilers and header files don't
-need to be installed into the applications container to properly pip install.
+installation. It ensures such that things like compilers and header files don't
+need to be installed into the applications container to keep ``pip install``
+happy.
 
 Requirements
 ------------
