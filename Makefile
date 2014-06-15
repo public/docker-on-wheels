@@ -27,5 +27,7 @@ app : wheels app/.wheels
 	popd
 
 clean :
+	rm -rf wheels
+	rm wheel-builder/packages.txt
 	docker rmi wheel-builder
 
