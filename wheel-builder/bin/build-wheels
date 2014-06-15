@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -e
+
+REQUIREMENTS_TMP=$(mktemp)
+cat > $REQUIREMENTS_TMP
+trap "rm $REQUIREMENTS_TMP" EXIT TERM INT
+
+pip wheel \
+    --use-wheel \
+    --wheel-dir=$WHEEL_DIR \
+    --find-links=$WHEEL_DIR \
+    --download-cache=$DOWNLOAD_DIR \
+    -r $REQUIREMENTS_TMP
