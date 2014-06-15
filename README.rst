@@ -6,6 +6,11 @@ Docker containers. The aim is to isolate the building of Wheels from their
 installation and use such that things like compilers and header files don't
 need to be installed into the applications container to properly pip install.
 
+Requirements
+------------
+
+Bash, GNU Make, Rsync, Docker.
+
 Usage
 -----
 
