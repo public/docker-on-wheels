@@ -16,8 +16,8 @@ Usage
 
  1. Symlink ``app`` to your application.
  2. Add system build dependencies to ``wheel-builder/packages.txt``
- 3. Add desired things to build to app/requirements.txt
- 4. Setup app/Dockerfile to load the wheels. 
+ 3. Add desired things to build to ``app/requirements.txt``
+ 4. Setup ``app/Dockerfile`` to load the wheels.
     e.g. ``ADD .wheels /var/cache/wheels`` and point pip at them with
     ``--find-links``.
  5. ``APP_TAG=foo make app`` Will build all the wheels and your app.
