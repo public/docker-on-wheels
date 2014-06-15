@@ -15,7 +15,7 @@ Usage
 -----
 
  1. Symlink ``app`` to your application.
- 2. Add system build dependencies to ``app/packages.txt``
+ 2. Add system build dependencies to ``app/wheel-build-dep-packages.txt``
  3. Add desired things to build to ``app/requirements.txt``
  4. Setup ``app/Dockerfile`` to load the wheels.
     e.g. ``ADD .wheels /var/cache/wheels`` and point pip at them with

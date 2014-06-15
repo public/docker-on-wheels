@@ -3,7 +3,7 @@ SHELL := /bin/bash
 .PHONY: wheels wheel-builder
 
 wheel-builder :
-	cp app/packages.txt wheel-builder/packages.txt
+	cp app/wheel-build-dep-packages.txt wheel-builder/packages.txt
 
 	pushd wheel-builder ; \
 	docker build -t wheel-builder . ; \
