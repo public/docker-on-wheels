@@ -20,5 +20,7 @@ Usage
  3. Add desired things to build to ``app/requirements.txt``
  4. Setup ``app/Dockerfile`` to load the wheels.
     e.g. ``ADD .wheels /var/cache/wheels`` and point pip at them with
-    ``--find-links``.
+    ``--find-links``. Then ``rm -rf /var/cache/wheels`` once everything is
+    installed. You might consider using something like ``pip2pi`` to provide
+    access to the wheels from within the container build environment.
  5. ``APP_TAG=foo make app`` Will build all the wheels and your app.
